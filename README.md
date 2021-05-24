@@ -4,7 +4,7 @@ Tema pentru Programare Avansata pe Obiecte.
 ## Clase
 * Carte
 * Sectiune
-* Biblioteca
+* Review
 * Persoana - abstracta
   - Autor
   - Cititor
@@ -27,6 +27,11 @@ HashMap, HashSet, TreeSet
 
 ## Interfete
 Comparable<T>
+
+## Clase serviciu
+* Biblioteca
+* CSV Reader / Writer
+* Command Logger
  
 ## Exception Handling
 Am implementat exceptii pentru diferite situatii (nu poti avea stoc negativ etc.)
