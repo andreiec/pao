@@ -29,7 +29,7 @@ public class BibliotecaService {
 
     /* CLIENTI */
     public void addClient(Cititor cititor) throws IOException {
-        log("Added Client");
+        log("Added client");
         clienti.add(cititor);
     }
 
