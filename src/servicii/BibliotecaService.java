@@ -1,32 +1,14 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+package servicii;
 
-public class Biblioteca {
-    private String nume;
-    private TreeSet<Sectiune> sectiuni;
-    private HashSet<Cititor> clienti;
+import clase.*;
 
-    public Biblioteca(String nume) {
-        this.nume = nume;
-        this.clienti = new HashSet<Cititor>();
-        this.sectiuni = new TreeSet<Sectiune>();
-    }
+import java.io.IOException;
+import java.util.*;
 
-    public Biblioteca(String nume, TreeSet<Sectiune> sectiuni, HashSet<Cititor> clienti) {
-        this.nume = nume;
-        this.sectiuni = sectiuni;
-        this.clienti = clienti;
-    }
 
-    public String getNume() {
-        return nume;
-    }
-
-    public void setNume(String nume) {
-        this.nume = nume;
-    }
+public class BibliotecaService {
+    private TreeSet<Sectiune> sectiuni = new TreeSet<>();
+    private HashSet<Cititor> clienti = new HashSet<>();
 
     public TreeSet<Sectiune> getSectiuni() {
         return sectiuni;
@@ -46,7 +28,8 @@ public class Biblioteca {
 
 
     /* CLIENTI */
-    public void addClient(Cititor cititor) {
+    public void addClient(Cititor cititor) throws IOException {
+        log("Added Client");
         clienti.add(cititor);
     }
 
@@ -99,6 +82,10 @@ public class Biblioteca {
             }
         }
         return null;
+    }
+
+    public TreeSet<Sectiune> getAllSectiuni() {
+        return sectiuni;
     }
 
     public Set<Carte> getAllBooksFromSection(String nume) {
@@ -236,4 +223,22 @@ public class Biblioteca {
         }
     }
 
+    public Vector<Carte> getAllCarti() {
+        Vector<Carte> carti = new Vector<>();
+        
+        for (Sectiune s : sectiuni) {
+            carti.addAll(s.getAllBooks());
+        }
+        
+        return carti;
+    }
+
+    public void addRecenzie(Carte c, Recenzie r) {
+        c.addRecenzie(r);
+    }
+
+    /* LOGGING */
+    public void log(String command) throws IOException {
+        LoggingService.getInstance().newLine(command);
+    }
 }
