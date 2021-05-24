@@ -1,3 +1,5 @@
+package clase;
+
 public class Autor extends Persoana{
 
     private int numarCarti;
