@@ -21,10 +21,14 @@ public class Main {
         BibliotecaService b = new BibliotecaService();
         CSVModule csvModule = CSVModule.getInstance();
 
-        /* Etapa 2 DEMO
+        /* Etapa 2
+
+        #### DEMO ####
+
         b.addClient(new Cititor("Macanache", "Deliric", 21));
         csvModule.readFromCSV("src\\date\\carti.csv");
         csvModule.saveToCSV(new Vector<Vector<String>>(), "src\\date\\csvModuleTest.csv");
+
          */
 
 
@@ -62,6 +66,7 @@ public class Main {
         sectiuneRepository.removeSectiunebyID(10);
 
 
+
         #### DEMO 2 ####
 
         ~ Create
@@ -85,11 +90,6 @@ public class Main {
         sectiuneRepository.removeSectiunebyID(7);
 
         */
-
-
-
-
-
 
 
         LoggingService log = LoggingService.getInstance();
