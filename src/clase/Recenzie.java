@@ -5,11 +5,14 @@ public class Recenzie {
     private int scor;
     private String autor;
     private String mesaj;
+    private int id_carte;
 
-    public Recenzie(int scor, String autor, String mesaj) {
+
+    public Recenzie(int scor, String autor, String mesaj, int id_carte) {
         this.scor = scor;
         this.autor = autor;
         this.mesaj = mesaj;
+        this.id_carte = id_carte;
     }
 
     public int getScor() {
@@ -34,5 +37,13 @@ public class Recenzie {
 
     public void setMesaj(String mesaj) {
         this.mesaj = mesaj;
+    }
+
+    public int getIdCarte() {
+        return id_carte;
+    }
+
+    public void setIdCarte(int id_carte) {
+        this.id_carte = id_carte;
     }
 }

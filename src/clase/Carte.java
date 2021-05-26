@@ -6,6 +6,8 @@ public class Carte {
     private String nume;
     private Autor autor;
     private int anLansare;
+    private int sectiuneId;
+    private int autorId;
     private Vector<Recenzie> recenzii;
 
     public Carte(String nume, Autor autor, int anLansare) {
@@ -19,6 +21,13 @@ public class Carte {
         this.autor = autor;
         this.anLansare = anLansare;
         this.recenzii = recenzii;
+    }
+
+    public Carte(String nume, int anLansare, int autorId, int sectiuneId) {
+        this.nume = nume;
+        this.autorId = autorId;
+        this.anLansare = anLansare;
+        this.sectiuneId = sectiuneId;
     }
 
     public String getNume() {
@@ -56,4 +65,21 @@ public class Carte {
     public void addRecenzie(Recenzie r) {
         recenzii.add(r);
     }
+
+    public int getSectiuneId() {
+        return sectiuneId;
+    }
+
+    public void setSectiuneId(int sectiuneId) {
+        this.sectiuneId = sectiuneId;
+    }
+
+    public int getAutorId() {
+        return autorId;
+    }
+
+    public void setAutorId(int autorId) {
+        this.autorId = autorId;
+    }
+
 }
