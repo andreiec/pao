@@ -19,6 +19,8 @@ Tema pentru Programare Avansata pe Obiecte.
 * O biblioteca gestioneaza returnarea unei carti de catre un cititor
 * O biblioteca poate afisa toate cartile dintr-o sectiune
 * O biblioteca poate goli o sectiune
+* O biblioteca poate afisa toate sectiunile
+* O biblioteca poate gasi carti dupa nume
 
 Drept clasa serviciu am folosit biblioteca.
 
